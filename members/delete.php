@@ -1,0 +1,1 @@
+<?php include "../config.php"; require_login(); $id=(int)($_GET['id']??0); mysqli_query($conn,"DELETE FROM council_members WHERE id=$id"); log_action($conn,"Deleted member ID $id","Council Members"); header("Location: index.php"); exit(); ?>
